@@ -1,7 +1,7 @@
 docs
 ====
 
-Components (devhook/components)
+Компоненты (devhook/components или в виде отдельных пакетов)
 
 - [Asset](Asset.md)
 - Theme
@@ -12,15 +12,17 @@ Components (devhook/components)
 - Widget
 - ?Layout (Page)
 
-
 Backend (devhook/backend)
 
-- Backend
-- Roles, ACL
-- Extending
+- Конфигурация и использование
+- Права, ACL
 
 Shop (devhook/shop)
 
 - Cart
 - Order
-- ...
+- Product
+- Category
+- Vendor
+- ?Filter
+- 
