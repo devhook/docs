@@ -59,31 +59,19 @@ Config file:
 Devhook\Asset::register('jquery', array('js' => 'path/to/jquery.min.js'));
 ```
 
-### Использование в представлении
+Добавляет ассет к текущему шаблону
 
 ```php
-<?php
-Devhook\Asset::required('jquery');
-?>
-<!-- View content -->
+Devhook\Asset::required('jquery', 'ckeditor');
 ```
 
-### Использование в шаблонах 
+Использование в шаблонах 
 
 ```php
-<html>
-<head>
-    <!-- ... -->
-    <?=Devhook\Asset::styles() ?>
-    <?=Devhook\Asset::scripts() ?>
-</head>
-<body>
-    <!-- ... -->
-    
-    <?=Devhook\Asset::scripts('footer') ?>
-    <!-- OR -->
-    <?=Devhook\Asset::place('footer')->scripts() ?>
-</body>
-</html>
-<!-- View content -->
+// for <head>
+echo Devhook\Asset::styles();
+echo Devhook\Asset::scripts();
+
+// before </body>
+echo Devhook\Asset::place('footer')->scripts();
 ```
