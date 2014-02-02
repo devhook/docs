@@ -24,5 +24,4 @@ Shop (devhook/shop)
 - Product
 - Category
 - Vendor
-- ?Filter
-- 
+- Filter
