@@ -2,13 +2,14 @@
 
 Компонент управления скриптами и стилями шаблона. ! Не компилирует а только подключает скрипты и стили в необходимые места.
 
-## Примеры решений:
+## Сторонние решения:
 - Port Laravel 3 asset [teepluss/laravel4-asset](https://github.com/teepluss/laravel4-asset)
 - [RoumenDamianoff/laravel-assets](https://github.com/RoumenDamianoff/laravel-assets)
 - [orchestral/asset](https://github.com/orchestral/asset)
 - [basset](http://jasonlewis.me/code/basset/4.0)
 
-## Необходимо
+
+## Необходимо сделать
 
 - Конфиг. Описание набора ассетов. (! Определиться с путем к файлу)
 - Регистрация ассета
@@ -23,25 +24,22 @@
 - FIX: Рекурсивный вызов зависимостей
 
 
-## Config
+## Конфигурация
 
-Config file:
+Путь к конфигурационному файлу:
 - app/config/asset.php
 - ? app/config/packages/devhook/asset/config.php
 - ? app/config/packages/devhook/components/asset.php
 
+Пример конфига:
 ```php
 <?php return array(
 	
 	'assets' => array(
         
-        'jquery' => array(
-            'js' => 'path/to/jquery.min.js'
-        ),
-        
-        'normalize' => array(
-            'css' => 'path/to/normalize.min.css'
-        ),
+        'jquery' => 'path/to/jquery.min.js',
+
+        'normalize' => 'path/to/normalize.min.css',
         
         'bootstrap' => array(
             'required' => 'jquery',
@@ -59,7 +57,7 @@ Config file:
 );
 ```
 
-## Examples
+## Примеры
 
 ### Регистрация ассета
 
