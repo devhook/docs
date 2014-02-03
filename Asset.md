@@ -1,6 +1,7 @@
 #Asset
 
 ## Примеры решений:
+- Port Laravel 3 asset [teepluss/laravel4-asset](https://github.com/teepluss/laravel4-asset)
 - [RoumenDamianoff/laravel-assets](https://github.com/RoumenDamianoff/laravel-assets)
 - [orchestral/asset](https://github.com/orchestral/asset)
 
