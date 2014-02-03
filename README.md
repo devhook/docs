@@ -4,7 +4,7 @@ docs
 Компоненты (в виде отдельных пакетов)
 
 - [Asset](Asset.md)
-- Theme
+- [Theme](Theme.md)
 - Controller
 - Model
 - Field(s)
