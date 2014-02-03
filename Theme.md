@@ -15,7 +15,7 @@
 ```
 app/themes/
     {theme}/
-        assets/
+        public/
         layouts/
         partials/
         views/
@@ -24,13 +24,16 @@ app/themes/
         preview.jpg
 ```
 
+> Содержимое папки `app/themes/{theme}/public/` копируется в папку `public/themes/{theme}/`
+
+
 ## Настройки темы (app/themes/{theme}/config.php):
 
 ```php
 return array(
     'name' => 'Default theme',
-    'version' => 1,
-    'author' => array('name'=>'...', 'email'=>'...');
+    'description' => '',
+    'author' => 'Devhook';
     
     'inherit' => null // OR 'default'
     'events' => array(
@@ -42,4 +45,21 @@ return array(
         ),
     ),
 );
+```
+
+## Использование
+
+```php
+$theme = Theme::make('default')->layout('mobile');
+
+$theme->setTitle('News');
+$theme->setDescription('...');
+
+$theme->asset->add('path/to/news.js');
+
+$theme->view('news/index', array(
+    'news' => News::all(),
+));
+
+echo $theme;
 ```
