@@ -21,9 +21,9 @@
 
 Пример конфига:
 ```php
-<?php return array(
-	
-	'assets' => array(
+return array(
+    
+    'assets' => array(
         
         'jquery' => 'path/to/jquery.min.js',
 
@@ -33,7 +33,7 @@
             'required' => 'jquery',
             'js' => array(
                 'file' => 'path/to/bootstrap.min.js',
-                'place' => 'footer',
+                'group' => 'footer',
             ),
             'css' => array(
                 'path/to/bootstrap.min.css',
@@ -47,37 +47,63 @@
 
 ## Примеры
 
+Добавление скриптов и стилей к текущему шаблону
 ```php
-// Добавление ассета к 
+// Добавление ссылки на скрипт к шаблону
 Devhook\Asset::add('path/to/custom.js');
 
+// Добавление ссылки на файл стилей к шаблону
+Devhook\Asset::add('path/to/style.css');
+
+// Добавление ссылки на скрипт к шаблону перед закрывающим BODY
 Devhook\Asset::add('path/to/custom-footer.js', 'footer');
 
-Devhook\Asset::addScript('$("#alert").show()', 'footer');
+// Добавление стилей
+Devhook\Asset::addStyle('body {background:#EEE}');
 
-// Регистрация ассета
+// Добавление скрипта перед закрывающим BODY
+Devhook\Asset::addScript('$("#alert").show()', 'footer');
+```
+
+Примеры регистрации ассетов (предопределенные ассеты) 
+```php
+// Пример 1 (jQuery)
 Devhook\Asset::register('jquery', 'path/to/jquery.min.js');
 
-// Регистрация ассета
+// Пример 2 (Twitter Bootstrap)
 Devhook\Asset::register('bootstrap', array(
-	'required' => 'jquery',
-	'css' => 'path/to/bootstrap.min.css',
-	'js' => array('path/to/jquery.min.js', 'place'),
+    'required' => 'jquery',
+    'css'      => array(
+        'path/to/bootstrap.min.css',
+        'path/to/bootstrap-theme.min.css',
+    ),
+    'js' => array(
+        'path/to/bootstrap.min.js',
+        'group' => 'footer'
+    ),
 ));
+```
 
-// Добавляет ассет к текущему шаблону
-Devhook\Asset::required('jquery', 'ckeditor');
-
+Добавление ранее зарегистрированных ассетов к текущему шаблону
+```php
+// Добавляет ранее зарегистрированные ассет(ы) к текущему шаблону
+Devhook\Asset::required('jquery', 'bootstrap', 'ckeditor');
 ```
 
 
-Использование в шаблонах 
-
+Использование в шаблонах
 ```php
-// for <head>
-echo Devhook\Asset::styles();
-echo Devhook\Asset::scripts();
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <?= Devhook\Asset::styles() ?>
+        <?= Devhook\Asset::scripts() ?>
+    </head>
+    <body>
+        <?= $content ?>
 
-// before </body>
-echo Devhook\Asset::place('footer')->scripts();
+        <?= Devhook\Asset::scripts('footer') ?>
+    </body>
+</html>
 ```
