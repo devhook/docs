@@ -1,5 +1,8 @@
 #Asset
 
+## Примеры решений:
+- [RoumenDamianoff/laravel-assets](https://github.com/RoumenDamianoff/laravel-assets)
+- [orchestral/asset](https://github.com/orchestral/asset)
 
 ## Необходимо
 
@@ -12,6 +15,7 @@
 - Вывод только указанных в методе ассетов
 - Отдельные ассеты для разных контейнеров: сайт, админка
 - Вывод ассетов определенного контейнера
+- Добавление скрипта в виде: <script>/* code */</script>
 - FIX: Рекурсивный вызов зависимостей
 
 
