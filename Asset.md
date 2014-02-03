@@ -32,7 +32,7 @@ return array(
         'bootstrap' => array(
             'required' => 'jquery',
             'js' => array(
-                'file' => 'path/to/bootstrap.min.js' => 'footer',
+                'path/to/bootstrap.min.js' => 'footer',
             ),
             'css' => array(
                 'path/to/bootstrap.min.css',
