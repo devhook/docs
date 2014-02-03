@@ -14,11 +14,32 @@
 
 ```
 app/themes/
-    default/
+    {theme}/
         assets/
         layouts/
         partials/
         views/
         widgets/
         config.php
+        preview.jpg
+```
+
+## Настройки темы (app/themes/{theme}/config.php):
+
+```php
+return array(
+    'name' => 'Default theme',
+    'version' => 1,
+    'author' => array('name'=>'...', 'email'=>'...');
+    
+    'inherit' => null // OR 'default'
+    'events' => array(
+        'init' => function($theme){},
+        'before_theme' => function($theme){},
+        'before_layout' => array(
+            'default' => function($theme){},
+            'home' => function($theme){},
+        ),
+    ),
+);
 ```
