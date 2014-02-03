@@ -47,17 +47,29 @@
 
 ## Примеры
 
-### Регистрация ассета
-
 ```php
-Devhook\Asset::register('jquery', array('js' => 'path/to/jquery.min.js'));
-```
+// Добавление ассета к 
+Devhook\Asset::add('path/to/custom.js');
 
-Добавляет ассет к текущему шаблону
+Devhook\Asset::add('path/to/custom-footer.js', 'footer');
 
-```php
+Devhook\Asset::addScript('$("#alert").show()', 'footer');
+
+// Регистрация ассета
+Devhook\Asset::register('jquery', 'path/to/jquery.min.js');
+
+// Регистрация ассета
+Devhook\Asset::register('bootstrap', array(
+	'required' => 'jquery',
+	'css' => 'path/to/bootstrap.min.css',
+	'js' => array('path/to/jquery.min.js', 'place'),
+));
+
+// Добавляет ассет к текущему шаблону
 Devhook\Asset::required('jquery', 'ckeditor');
+
 ```
+
 
 Использование в шаблонах 
 
