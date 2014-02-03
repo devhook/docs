@@ -1,5 +1,7 @@
 #Asset
 
+Компонент управления скриптами и стилями шаблона. ! Не компилирует а только подключает скрипты и стили в необходимые места.
+
 ## Примеры решений:
 - Port Laravel 3 asset [teepluss/laravel4-asset](https://github.com/teepluss/laravel4-asset)
 - [RoumenDamianoff/laravel-assets](https://github.com/RoumenDamianoff/laravel-assets)
