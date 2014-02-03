@@ -32,8 +32,7 @@ return array(
         'bootstrap' => array(
             'required' => 'jquery',
             'js' => array(
-                'file' => 'path/to/bootstrap.min.js',
-                'group' => 'footer',
+                'file' => 'path/to/bootstrap.min.js' => 'footer',
             ),
             'css' => array(
                 'path/to/bootstrap.min.css',
@@ -78,8 +77,7 @@ Devhook\Asset::register('bootstrap', array(
         'path/to/bootstrap-theme.min.css',
     ),
     'js' => array(
-        'path/to/bootstrap.min.js',
-        'group' => 'footer'
+        'path/to/bootstrap.min.js' => 'footer',
     ),
 ));
 ```
