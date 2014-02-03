@@ -1,13 +1,18 @@
+Theme (devhook/theme)
+
+- Theme
+- Asset
+- Widget
+- ?Breadcrumbs
+- ?Menu
+
+
 Компоненты (в виде отдельных пакетов)
 
-- [Asset](Asset.md)
-- [Theme](Theme.md)
 - Controller
 - Model
 - Field(s)
 - Form
-- Widget
-- ?Layout (Page)
 - [CKEditor](CKEditor.md)
 
 Backend (devhook/backend)
