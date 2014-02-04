@@ -99,7 +99,7 @@ Route::get('news/{id}', function($id){
 ?>
 ```
 
-## Использование шаблоне (layout/default.php)
+## Использование в шаблоне (layout/default.php)
 
 ```php
 <!doctype html>
