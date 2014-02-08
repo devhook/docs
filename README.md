@@ -1,3 +1,4 @@
+<!--priority: 100-->
 ## Theme
 
 Package: [devhook/theme](https://github.com/devhook/theme)
